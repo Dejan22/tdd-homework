@@ -8,16 +8,43 @@ class Codebreaker
 
     def start(secret_number)
       @secret_number = secret_number
-
       output.puts "Welcome to Codebreaker"
       output.puts "Enter guess:"
     end
 
     def guess(input)
-      # Make sure to replace next line with the actual implemented marking algorithm,
-      # using the @secret_number
+      if input.length != 4
+        output.puts "Try guessing a number with four digits"
+      else
+        matching(input)
+      end
+      # if @secret_number == input
+      #   output.puts "You lucky BU******D !!!!"
+      #   exit
+      # end
+      # output.puts "you typed '#{input}'"
+    end
+    def matching(input)
+        match_result = []
+        input_numbers = input.split("")
+        secret_numbers = @secret_number.split("")
 
-      output.puts "you typed '#{input}'"
+        input_numbers.each_with_index do | input_number, x |
+
+          if @secret_number.include?(input_number)
+
+            if secret_numbers[x] == input_number
+              match_result << "+"
+            else
+              match_result << "-"
+            end
+
+            else
+              match_result << " "
+            end
+
+          end
+        output.puts match_result.join("")
     end
   end
 end
