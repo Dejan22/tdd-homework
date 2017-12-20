@@ -43,7 +43,7 @@ class Codebreaker
              match_result << " "
           end
 
-          end
+         end
         output.puts match_result.sort.join("")
     end
   end
