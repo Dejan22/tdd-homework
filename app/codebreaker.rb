@@ -44,7 +44,7 @@ class Codebreaker
             end
 
           end
-        output.puts match_result.join("")
+        output.puts match_result.sort.join("")
     end
   end
 end
