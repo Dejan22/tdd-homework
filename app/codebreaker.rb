@@ -39,9 +39,9 @@ class Codebreaker
               match_result << "-"
             end
 
-            else
-              match_result << " "
-            end
+          else
+             match_result << " "
+          end
 
           end
         output.puts match_result.sort.join("")
