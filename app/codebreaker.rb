@@ -40,7 +40,7 @@ class Codebreaker
             end
 
           else
-             match_result << " "
+             match_result << ""
           end
 
          end
